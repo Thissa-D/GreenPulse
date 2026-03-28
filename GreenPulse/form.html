@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <section id="form.html"></section>
+<head>
+  
+  <meta charset="UTF-8">
+  <title>GreenPulse - Join Us</title>
+
+  <style>
+    body {
+      background-color: #f5f0e8;
+      font-family: Arial;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #4a7c59;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4a7c59;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3a5f45;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Join GreenPulse 🌿</h1>
+  <p>Be part of Climate Action. Fill the form below.</p>
+
+  <form onsubmit="return validateForm()">
+
+    <input type="text" id="name" placeholder="Enter your name"><br>
+
+    <input type="email" id="email" placeholder="Enter your email"><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <script>
+    function validateForm() {
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+
+      // Check name
+      if (name === "") {
+        alert("Name cannot be empty!");
+        return false;
+      }
+
+      // Check email
+      if (!email.includes("@")) {
+        alert("Enter a valid email!");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+<footer>
+    <a href="pageEditor_ST2.html">Page Editor</a> |
+    <a href="validation_ST2.html">Validation</a>
+</footer>
+</body>
+</html>

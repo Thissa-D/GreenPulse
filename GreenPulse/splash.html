@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="4; url=home.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPulse - Splash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="splash-body">
+
+<div class="splash-box">
+    <h1>GreenPulse</h1>
+    <p>Climate Action for a Better Future</p>
+    <p>Our mission is to inspire people to take simple actions that help protect the environment.</p>
+
+    <p><strong>Group Members:</strong> Thisen, Damiru, Navody, Kruithika</p>
+
+    <div class="loader"></div>
+
+    <p>Redirecting in <span id="countdown">4</span> seconds...</p>
+
+    <a href="home.html" class="btn">Skip Intro</a>
+</div>
+
+<script>
+    let time = 4;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(function () {
+        time--;
+        countdown.innerText = time;
+
+        if (time <= 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

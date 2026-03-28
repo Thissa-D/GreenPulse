@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPulse - Sitemap</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        }
+
+        .sitemap-container h2,
+        .sitemap-container p {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sitemap-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .node rect {
+            fill: #dce8cf;
+            stroke: #4a7c59;
+            stroke-width: 2;
+            rx: 10;
+            ry: 10;
+            transition: 0.3s;
+        }
+
+        .node text {
+            fill: #2f4f2f;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        .node:hover rect {
+            fill: #c8d8b9;
+            stroke: #365a42;
+            stroke-width: 3;
+        }
+
+        .node:focus rect,
+        .node a:focus rect {
+            fill: #c8d8b9;
+            stroke: #1f3d27;
+            stroke-width: 4;
+            outline: none;
+        }
+
+        .line {
+            stroke: #4a7c59;
+            stroke-width: 2;
+        }
+
+        .active-nav {
+            text-decoration: underline;
+            color: #365a42;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GreenPulse</h1>
+    <p>Climate Action for a Better Future</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="ais.html">AIS</a>
+    <a href="form.html">Join</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="team.html">Team</a>
+    <a href="profile.html">Profile</a>
+    <a href="sitemap.html" class="active-nav">Sitemap</a>
+</nav>
+
+<main>
+    <div class="sitemap-container">
+        <h2>Graphical Sitemap</h2>
+        <p>This SVG sitemap shows the structure of the GreenPulse website.</p>
+
+        <svg class="sitemap-svg" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sitemapTitle sitemapDesc">
+            <title id="sitemapTitle">GreenPulse sitemap</title>
+            <desc id="sitemapDesc">A visual sitemap showing the hierarchy and links between pages in the GreenPulse website.</desc>
+
+            <!-- Lines -->
+            <line x1="600" y1="90" x2="600" y2="150" class="line"/>
+            <line x1="600" y1="150" x2="250" y2="150" class="line"/>
+            <line x1="600" y1="150" x2="950" y2="150" class="line"/>
+
+            <line x1="250" y1="150" x2="250" y2="220" class="line"/>
+            <line x1="950" y1="150" x2="950" y2="220" class="line"/>
+
+            <line x1="250" y1="220" x2="90" y2="220" class="line"/>
+            <line x1="250" y1="220" x2="410" y2="220" class="line"/>
+            <line x1="950" y1="220" x2="760" y2="220" class="line"/>
+            <line x1="950" y1="220" x2="1110" y2="220" class="line"/>
+
+            <line x1="90" y1="220" x2="90" y2="300" class="line"/>
+            <line x1="250" y1="220" x2="250" y2="300" class="line"/>
+            <line x1="410" y1="220" x2="410" y2="300" class="line"/>
+            <line x1="760" y1="220" x2="760" y2="300" class="line"/>
+            <line x1="950" y1="220" x2="950" y2="300" class="line"/>
+            <line x1="1110" y1="220" x2="1110" y2="300" class="line"/>
+
+            <line x1="600" y1="90" x2="600" y2="360" class="line"/>
+            <line x1="600" y1="360" x2="600" y2="430" class="line"/>
+
+            <line x1="600" y1="430" x2="250" y2="430" class="line"/>
+            <line x1="600" y1="430" x2="950" y2="430" class="line"/>
+
+            <line x1="250" y1="430" x2="250" y2="520" class="line"/>
+            <line x1="950" y1="430" x2="950" y2="520" class="line"/>
+
+            <line x1="250" y1="520" x2="120" y2="520" class="line"/>
+            <line x1="250" y1="520" x2="380" y2="520" class="line"/>
+            <line x1="950" y1="520" x2="820" y2="520" class="line"/>
+            <line x1="950" y1="520" x2="1080" y2="520" class="line"/>
+
+            <line x1="120" y1="520" x2="120" y2="610" class="line"/>
+            <line x1="380" y1="520" x2="380" y2="610" class="line"/>
+            <line x1="820" y1="520" x2="820" y2="610" class="line"/>
+            <line x1="1080" y1="520" x2="1080" y2="610" class="line"/>
+
+            <line x1="600" y1="430" x2="600" y2="700" class="line"/>
+            <line x1="600" y1="700" x2="300" y2="700" class="line"/>
+            <line x1="600" y1="700" x2="900" y2="700" class="line"/>
+
+            <!-- Top node -->
+            <a href="splash.html" class="node" tabindex="0">
+                <title>Splash Screen</title>
+                <rect x="510" y="30" width="180" height="60"></rect>
+                <text x="600" y="65" text-anchor="middle">Splash Screen</text>
+            </a>
+
+            <!-- Main row -->
+            <a href="home.html" class="node" tabindex="0">
+                <title>Home Page</title>
+                <rect x="510" y="150" width="180" height="60"></rect>
+                <text x="600" y="185" text-anchor="middle">Home</text>
+            </a>
+
+            <!-- Left branch -->
+            <a href="gallery.html" class="node" tabindex="0">
+                <title>Gallery Page</title>
+                <rect x="160" y="220" width="180" height="60"></rect>
+                <text x="250" y="255" text-anchor="middle">Gallery</text>
+            </a>
+
+            <a href="feedback.html" class="node" tabindex="0">
+                <title>Feedback Page</title>
+                <rect x="860" y="220" width="180" height="60"></rect>
+                <text x="950" y="255" text-anchor="middle">Feedback</text>
+            </a>
+
+            <!-- Second row -->
+            <a href="ais.html" class="node" tabindex="0">
+                <title>Action Impact Simulator Page</title>
+                <rect x="0" y="300" width="180" height="60"></rect>
+                <text x="90" y="335" text-anchor="middle">AIS</text>
+            </a>
+
+            <a href="form.html" class="node" tabindex="0">
+                <title>Join Form Page</title>
+                <rect x="160" y="300" width="180" height="60"></rect>
+                <text x="250" y="335" text-anchor="middle">Join Form</text>
+            </a>
+
+            <a href="team.html" class="node" tabindex="0">
+                <title>Team Page</title>
+                <rect x="320" y="300" width="180" height="60"></rect>
+                <text x="410" y="335" text-anchor="middle">Team</text>
+            </a>
+
+            <a href="profile.html" class="node" tabindex="0">
+                <title>User Profile Page</title>
+                <rect x="670" y="300" width="180" height="60"></rect>
+                <text x="760" y="335" text-anchor="middle">Profile</text>
+            </a>
+
+            <a href="sitemap.html" class="node" tabindex="0">
+                <title>Sitemap Page</title>
+                <rect x="860" y="300" width="180" height="60"></rect>
+                <text x="950" y="335" text-anchor="middle">Sitemap</text>
+            </a>
+
+            <a href="validation_ST4.html" class="node" tabindex="0">
+                <title>Validation Student 4 Page</title>
+                <rect x="1020" y="300" width="180" height="60"></rect>
+                <text x="1110" y="335" text-anchor="middle">Validation ST4</text>
+            </a>
+
+            <!-- Content pages parent -->
+            <a href="content_ST1.html" class="node" tabindex="0">
+                <title>Content Pages</title>
+                <rect x="510" y="430" width="180" height="60"></rect>
+                <text x="600" y="465" text-anchor="middle">Content Pages</text>
+            </a>
+
+            <!-- Content children -->
+            <a href="content_ST1.html" class="node" tabindex="0">
+                <title>Student 1 Content Page</title>
+                <rect x="30" y="610" width="180" height="60"></rect>
+                <text x="120" y="645" text-anchor="middle">Content ST1</text>
+            </a>
+
+            <a href="content_ST2.html" class="node" tabindex="0">
+                <title>Student 2 Content Page</title>
+                <rect x="290" y="610" width="180" height="60"></rect>
+                <text x="380" y="645" text-anchor="middle">Content ST2</text>
+            </a>
+
+            <a href="content_ST3.html" class="node" tabindex="0">
+                <title>Student 3 Content Page</title>
+                <rect x="730" y="610" width="180" height="60"></rect>
+                <text x="820" y="645" text-anchor="middle">Content ST3</text>
+            </a>
+
+            <a href="content_ST4.html" class="node" tabindex="0">
+                <title>Student 4 Content Page</title>
+                <rect x="990" y="610" width="180" height="60"></rect>
+                <text x="1080" y="645" text-anchor="middle">Content ST4</text>
+            </a>
+
+            <!-- Bottom support pages -->
+            <a href="pageEditor_ST1.html" class="node" tabindex="0">
+                <title>Student 1 Page Editor</title>
+                <rect x="210" y="700" width="180" height="60"></rect>
+                <text x="300" y="735" text-anchor="middle">Page Editor ST1</text>
+            </a>
+
+            <a href="pageEditor_ST4.html" class="node" tabindex="0">
+                <title>Student 4 Page Editor</title>
+                <rect x="810" y="700" width="180" height="60"></rect>
+                <text x="900" y="735" text-anchor="middle">Page Editor ST4</text>
+            </a>
+        </svg>
+    </div>
+</main>
+
+<footer>
+    <p>Student 4 - Kruithika</p>
+    <a href="pageEditor_ST4.html">Page Editor</a> |
+    <a href="validation_ST4.html">Validation</a>
+</footer>
+
+</body>
+</html>

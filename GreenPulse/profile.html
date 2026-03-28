@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPulse - Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>GreenPulse</h1>
+    <p>Climate Action for a Better Future</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="ais.html">AIS</a>
+    <a href="form.html">Join</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="team.html">Team</a>
+    <a href="profile.html">Profile</a>
+    <a href="sitemap.html">Sitemap</a>
+</nav>
+
+<main>
+    <div class="profile-box">
+        <h2>User Profile</h2>
+        <p>Click below to create your profile.</p>
+
+        <button onclick="createProfile()">Create Profile</button>
+
+        <div id="output"></div>
+    </div>
+</main>
+
+<footer>
+    <a href="pageEditor_ST4.html">Page Editor</a> |
+    <a href="validation_ST4.html">Validation</a>
+</footer>
+
+<script>
+    function createProfile() {
+        let name = prompt("Enter your name:");
+        let role = prompt("Enter your role (student, volunteer, etc):");
+        let action = prompt("What climate action will you take?");
+
+        if (name === "" || role === "" || action === "") {
+            alert("Please fill all details!");
+            return;
+        }
+
+        let result = `
+            <h3>Profile Details</h3>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Role:</strong> ${role}</p>
+            <p><strong>Climate Action:</strong> ${action}</p>
+        `;
+
+        document.getElementById("output").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
+

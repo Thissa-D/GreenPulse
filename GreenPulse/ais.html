@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPulse - AIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="aisBody">
+
+<header>
+    <h1>GreenPulse</h1>
+    <p>Climate Action for a Better Future</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="ais.html">AIS</a>
+    <a href="form.html">Join</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="team.html">Team</a>
+    <a href="profile.html">Profile</a>
+    <a href="sitemap.html">Sitemap</a>
+</nav>
+
+<main>
+    <section>
+        <h2>Action Impact Simulator</h2>
+        <p>Select climate actions and see your impact score.</p>
+
+        <div class="action-grid">
+            <div class="action-card">
+                <img src="img/planting trees.jpg" alt="Planting trees">
+                <h3>Plant Trees</h3>
+                <p>Planting trees helps absorb carbon dioxide.</p>
+                <button onclick="addPoints(5)">Add +5</button>
+            </div>
+
+            <div class="action-card">
+                <img src="img/Saving water at home.jpg" alt="Saving water at home">   
+                <h3>Save Water</h3>
+                <p>Reducing water waste protects natural resources.</p>
+                <button onclick="addPoints(3)">Add +3</button>
+            </div>
+
+            <div class="action-card">
+                <img src="img/Person cycling.jpg" alt="Person cycling">
+                <h3>Use Bicycle</h3>
+                <p>Cycling reduces fuel use and air pollution.</p>
+                <button onclick="addPoints(4)">Add +4</button>
+            </div>
+
+            <div class="action-card">
+                <img src="img/Reusable bags.jpg" alt="Reusable bags">
+                <h3>Reduce Plastic</h3>
+                <p>Using reusable items lowers plastic waste.</p>
+                <button onclick="addPoints(2)">Add +2</button>
+            </div>
+
+            <div class="action-card">
+                <img src="img/Recycling items.jpg" alt="Recycling items">
+                <h3>Recycle Waste</h3>
+                <p>Recycling helps reduce landfill waste.</p>
+                <button onclick="addPoints(4)">Add +4</button>
+            </div>
+
+            <div class="action-card">
+                <img src="img/Solar panels.jpg" alt="Solar panels">
+                <h3>Use Solar Energy</h3>
+                <p>Renewable energy reduces reliance on fossil fuels.</p>
+                <button onclick="addPoints(6)">Add +6</button>
+            </div>
+        </div>
+
+        <div class="score-box">
+            <h3>Total Points: <span id="score">0</span></h3>
+            <h3>Impact Level: <span id="level">Low</span></h3>
+            <button onclick="resetScore()">Reset</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <a href="pageEditor_ST2.html">Page Editor</a> |
+    <a href="validation_ST2.html">Validation</a>
+</footer>
+
+<script>
+    let total = 0;
+
+    function addPoints(points) {
+        total = total + points;
+        document.getElementById("score").innerText = total;
+
+        let level = "Low";
+        let bgColor = "#f5f0e8";
+
+        if (total <= 5) {
+            level = "Low";
+            bgColor = "#f5f0e8";
+        } else if (total <= 12) {
+            level = "Medium";
+            bgColor = "#e3efd9";
+        } else {
+            level = "High";
+            bgColor = "#d2e8c4";
+        }
+
+        document.getElementById("level").innerText = level;
+        document.getElementById("aisBody").style.backgroundColor = bgColor;
+    }
+
+    function resetScore() {
+        total = 0;
+        document.getElementById("score").innerText = total;
+        document.getElementById("level").innerText = "Low";
+        document.getElementById("aisBody").style.backgroundColor = "#f5f0e8";
+    }
+</script>
+
+</body>
+</html>

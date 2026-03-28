@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback - GreenPulse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div>
+    <a href="home.html">Home</a> |
+    <a href="ais.html">AIS</a> |
+    <a href="form.html">Join</a> |
+    <a href="feedback.html">Feedback</a> |
+    <a href="team.html">Team</a> |
+    <a href="profile.html">Profile</a> |
+    <a href="sitemap.html">Sitemap</a>
+  </div>
+
+  <h1>Feedback 🌿</h1>
+
+  <p>Share your thoughts about Climate Action.</p>
+
+  <!-- Feedback Form -->
+  <input type="text" id="name" placeholder="Enter your name"><br>
+
+  <input type="email" id="email" placeholder="Enter your email"><br>
+
+  <textarea id="message" placeholder="Your feedback"></textarea><br>
+
+  <button onclick="submitFeedback()">Submit</button>
+
+  <p id="output"></p>
+
+  <script>
+    function submitFeedback() {
+      let name = document.getElementById("name").value;
+      let message = document.getElementById("message").value;
+
+      if (name === "" || message === "") {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      document.getElementById("output").innerText =
+        "Thank you " + name + " for your feedback!";
+    }
+  </script>
+
+</body>
+</html>
